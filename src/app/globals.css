@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-paper text-ink antialiased;
+}
+
+@layer components {
+  /* Panels are plain: a hairline rule and white ground, no shadows. */
+  .panel {
+    @apply border border-rule bg-white;
+  }
+
+  .panel-head {
+    @apply flex flex-wrap items-baseline justify-between gap-3 border-b border-rule bg-navy-50 px-4 py-2.5;
+  }
+
+  .panel-title {
+    @apply font-serif text-[15px] font-semibold text-navy;
+  }
+
+  /* Thin brass keyline used to open a section. */
+  .rule-brass {
+    @apply border-t-2 border-brass;
+  }
+
+  .photo-frame {
+    @apply relative overflow-hidden border border-rule bg-navy-900;
+  }
+
+  .eyebrow {
+    @apply text-2xs font-semibold uppercase tracking-[0.18em] text-brass;
+  }
+
+  .label {
+    @apply mb-1 block text-2xs font-medium text-ink-500;
+  }
+
+  .input {
+    @apply w-full border border-rule bg-white px-2 py-1.5 text-[13px] text-ink
+      placeholder:text-ink-300 focus:border-navy focus:outline-none;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 border px-3 py-1.5 text-[13px] font-medium
+      transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn border-navy bg-navy text-white hover:bg-navy-700;
+  }
+
+  .btn-ghost {
+    @apply btn border-rule bg-white text-ink-700 hover:border-ink-500 hover:text-ink;
+  }
+
+  .btn-danger {
+    @apply btn border-oxblood/30 bg-white text-oxblood hover:bg-oxblood hover:text-white;
+  }
+
+  .btn-brass {
+    @apply btn border-brass bg-brass text-white hover:bg-brass-400;
+  }
+
+  .badge {
+    @apply inline-flex items-center border px-1.5 py-px text-2xs font-medium uppercase tracking-wide;
+  }
+
+  .table-head {
+    @apply border-b border-rule bg-paper px-3 py-2 text-left text-2xs font-semibold uppercase tracking-wide text-ink-500;
+  }
+
+  .table-cell {
+    @apply px-3 py-2 align-top text-[13px] text-ink;
+  }
+
+  .link {
+    @apply text-navy underline decoration-rule underline-offset-2 hover:decoration-navy;
+  }
+}
