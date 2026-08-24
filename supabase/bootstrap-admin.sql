@@ -8,7 +8,7 @@
 insert into public.profiles (id, email, full_name, role, status)
 select u.id, u.email, 'Vault Administrator', 'admin', 'active'
 from auth.users u
-where u.email = 'admin@guardianvault.com'
+where u.email = 'Richlove764366@yahoo.com'
 on conflict (id) do update
   set role = 'admin',
       status = 'active',
