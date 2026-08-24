@@ -8,7 +8,11 @@ export const COMPANY = {
   telephone: "+44 7476 536910",
   telephoneHref: "+447476536910",
   email: "guardianvault@meruado.uk",
-  /** Leave empty until the premises address is confirmed; it is hidden when blank. */
-  address: [] as string[],
+  address: [
+    "1 Ropemaker Street",
+    "Citypoint",
+    "London EC2Y 9AW",
+    "United Kingdom"
+  ],
   hours: "Monday to Friday, by appointment"
 };
